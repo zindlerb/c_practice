@@ -216,7 +216,50 @@ void word_histogram(void) {
     }
 }
 
+// 1-14
+// Should ideally handle the escaped characters better
+void characters_histogram(void) {
+    int c;
+    int characters_in_ascii = 255;
+    int char_counts[characters_in_ascii];
+
+    for (int i = 0; i < characters_in_ascii; ++i) {
+        char_counts[i] = 0;
+    }
+
+    while ((c = getchar()) != EOF) {
+        char_counts[c]++;
+    }
+
+    for (int i = 0; i < characters_in_ascii; ++i) {
+        if (i == '\t') {
+            printf("\\t");
+        } else if (i == '\n') {
+            printf("\\n");
+        } else {
+            printf("%c", (char) i);
+        }
+
+        printf(" | ");
+        for (int n = 0; n < char_counts[i]; ++n) {
+            putchar('o');
+        }
+        putchar('\n');
+    }
+}
+
+int power(int base, int n) {
+    int i, p;
+
+    p = 1;
+    for (i = 1; i <= n; ++i) {
+        p = p * base;
+    }
+    return p;
+}
+
 int main() {
+    //characters_histogram();
     //word_histogram();
     //digit_count();
     //word_print("something is happening");

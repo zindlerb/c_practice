@@ -1,4 +1,7 @@
 
+google chrome plugin that makes screen 800 px and auto
+    reading-width
+
 
 Take out wool sock
 
@@ -27,4 +30,6 @@ how does the c compiler know an int is not a pointeer?
 https://stackoverflow.com/questions/3038045/how-does-compiler-understand-the-pointer-type
 
 
-the program will just silently die if there is a null pointer error.
+the program will just silently die if there is a null pointer error?
+
+What is " vs ' in c for strings?
